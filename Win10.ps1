@@ -47,8 +47,8 @@ $tweaks = @(
 	"DisableHomeGroups",            # "EnableHomeGroups",
 	"DisableSharedExperiences",     # "EnableSharedExperiences",
 	"DisableRemoteAssistance",      # "EnableRemoteAssistance",
-	"EnableRemoteDesktop",          # "DisableRemoteDesktop",
-	"DisableAutoplay",              # "EnableAutoplay",
+	#"EnableRemoteDesktop",          # "DisableRemoteDesktop",
+	#"DisableAutoplay",              # "EnableAutoplay",
 	"DisableAutorun",               # "EnableAutorun",
 	# "EnableStorageSense",         # "DisableStorageSense",
 	# "DisableDefragmentation",     # "EnableDefragmentation",
@@ -65,13 +65,13 @@ $tweaks = @(
 	"DisableLockScreen",            # "EnableLockScreen",
 	# "DisableLockScreenRS1",       # "EnableLockScreenRS1",
 	"HideNetworkFromLockScreen",    # "ShowNetworkOnLockScreen",
-	"HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
+	#"HideShutdownFromLockScreen",   # "ShowShutdownOnLockScreen",
 	"DisableStickyKeys",            # "EnableStickyKeys",
 	"ShowTaskManagerDetails"        # "HideTaskManagerDetails",
 	"ShowFileOperationsDetails",    # "HideFileOperationsDetails",
 	# "EnableFileDeleteConfirm",    # "DisableFileDeleteConfirm",
 	"HideTaskbarSearchBox",         # "ShowTaskbarSearchBox",
-	"HideTaskView",                 # "ShowTaskView",
+	#"HideTaskView",                 # "ShowTaskView",
 	"ShowSmallTaskbarIcons",        # "ShowLargeTaskbarIcons",
 	"ShowTaskbarTitles",            # "HideTaskbarTitles",
 	"HideTaskbarPeopleIcon",        # "ShowTaskbarPeopleIcon",
@@ -83,17 +83,17 @@ $tweaks = @(
 	"SetExplorerThisPC",            # "SetExplorerQuickAccess",
 	"ShowThisPCOnDesktop",          # "HideThisPCFromDesktop",
 	# "ShowUserFolderOnDesktop",    # "HideUserFolderFromDesktop",
-	"HideDesktopFromThisPC",        # "ShowDesktopInThisPC",
+	#"HideDesktopFromThisPC",        # "ShowDesktopInThisPC",
 	# "HideDesktopFromExplorer",    # "ShowDesktopInExplorer",
-	"HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
+	#"HideDocumentsFromThisPC",      # "ShowDocumentsInThisPC",
 	# "HideDocumentsFromExplorer",  # "ShowDocumentsInExplorer",
-	"HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
+	#"HideDownloadsFromThisPC",      # "ShowDownloadsInThisPC",
 	# "HideDownloadsFromExplorer",  # "ShowDownloadsInExplorer",
-	"HideMusicFromThisPC",          # "ShowMusicInThisPC",
+	#"HideMusicFromThisPC",          # "ShowMusicInThisPC",
 	# "HideMusicFromExplorer",      # "ShowMusicInExplorer",
-	"HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
+	#"HidePicturesFromThisPC",       # "ShowPicturesInThisPC",
 	# "HidePicturesFromExplorer",   # "ShowPicturesInExplorer",
-	"HideVideosFromThisPC",         # "ShowVideosInThisPC",
+	#"HideVideosFromThisPC",         # "ShowVideosInThisPC",
 	# "HideVideosFromExplorer",     # "ShowVideosInExplorer",
 	"Hide3DObjectsFromThisPC",      # "Show3DObjectsInThisPC",
 	# "Hide3DObjectsFromExplorer",  # "Show3DObjectsInExplorer",
@@ -105,21 +105,21 @@ $tweaks = @(
 	# "EnableNumlock",              # "DisableNumlock",
 
 	### Application Tweaks ###
-	"DisableOneDrive",              # "EnableOneDrive",
-	"UninstallOneDrive",            # "InstallOneDrive",
+	#"DisableOneDrive",              # "EnableOneDrive",
+	#"UninstallOneDrive",            # "InstallOneDrive",
 	"UninstallMsftBloat",           # "InstallMsftBloat",
 	"UninstallThirdPartyBloat",     # "InstallThirdPartyBloat",
 	# "UninstallWindowsStore",      # "InstallWindowsStore",
-	"DisableXboxFeatures",          # "EnableXboxFeatures",
-	"DisableAdobeFlash",            # "EnableAdobeFlash",
+	#"DisableXboxFeatures",          # "EnableXboxFeatures",
+	#"DisableAdobeFlash",            # "EnableAdobeFlash",
 	# "UninstallMediaPlayer",       # "InstallMediaPlayer",
 	# "UninstallWorkFolders",       # "InstallWorkFolders",
-	# "InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
+	 "InstallLinuxSubsystem",      # "UninstallLinuxSubsystem",
 	# "InstallHyperV",              # "UninstallHyperV",
-	"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
-	"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
+	#"SetPhotoViewerAssociation",    # "UnsetPhotoViewerAssociation",
+	#"AddPhotoViewerOpenWith",       # "RemovePhotoViewerOpenWith",
 	"DisableSearchAppInStore",      # "EnableSearchAppInStore",
-	"DisableNewAppPrompt",          # "EnableNewAppPrompt",
+	#"DisableNewAppPrompt",          # "EnableNewAppPrompt",
 	"EnableF8BootMenu",             # "DisableF8BootMenu",
 	"SetDEPOptOut",                 # "SetDEPOptIn",
 	# "EnableMeltdownCompatFlag"    # "DisableMeltdownCompatFlag",
@@ -1646,7 +1646,7 @@ Function InstallOneDrive {
 # Uninstall default Microsoft applications
 Function UninstallMsftBloat {
 	Write-Host "Uninstalling default Microsoft applications..."
-	Get-AppxPackage "Microsoft.3DBuilder" | Remove-AppxPackage
+	#Get-AppxPackage "Microsoft.3DBuilder" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.BingFinance" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.BingNews" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.BingSports" | Remove-AppxPackage
@@ -1674,10 +1674,10 @@ Function UninstallMsftBloat {
 	Get-AppxPackage "Microsoft.MicrosoftStickyNotes" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.OneConnect" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.WindowsFeedbackHub" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
+	#Get-AppxPackage "Microsoft.MinecraftUWP" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.MicrosoftPowerBIForWindows" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.NetworkSpeedTest" | Remove-AppxPackage
-	Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
+	#Get-AppxPackage "Microsoft.MSPaint" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Microsoft3DViewer" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.RemoteDesktop" | Remove-AppxPackage
 	Get-AppxPackage "Microsoft.Print3D" | Remove-AppxPackage
