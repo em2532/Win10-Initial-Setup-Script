@@ -1,3 +1,7 @@
+## Fork
+
+Note this fork has been modified in order to provide a more enhance experience tailored for gaming setups (does not remove xbox application by default and other similar services).
+
 ## Description
 
 This is a PowerShell script for automation of routine tasks done after fresh installations of Windows 10 and Windows Server 2016. This is by no means any complete set of all existing Windows tweaks and neither is it another "antispying" type of script. It's simply a setting which I like to use and which in my opinion make the system less obtrusive.
